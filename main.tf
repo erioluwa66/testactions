@@ -10,12 +10,12 @@ resource "aws_vpc" "test" {
   }
 }
 
-resource "aws_subnet" "main" {
-  vpc_id            = aws_vpc.test.id
-  cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-east-2a"
+#resource "aws_subnet" "main" {
+#vpc_id            = aws_vpc.test.id
+#cidr_block        = "10.0.1.0/24"
+#availability_zone = "us-east-2a"
 
-  tags = {
-    Name = "Actions-test"
-  }
-}
+#tags = {
+#Name = "Actions-test"
+#}
+#}
