@@ -10,12 +10,12 @@ resource "aws_vpc" "test" {
   }
 }
 
-resource "aws_subnet" "Subnet" {
-  vpc_id            = aws_vpc.subnet
-  cidr_block        = "10.0.0.0/24" # Adjust the CIDR block for your subnet
-  availability_zone = "us-east-2a"  # Adjust the availability zone as needed
+resource "aws_subnet" "main" {
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-east-2a"
 
   tags = {
-    name = "Subnet1"
+    Name = "Actions-test"
   }
 }
